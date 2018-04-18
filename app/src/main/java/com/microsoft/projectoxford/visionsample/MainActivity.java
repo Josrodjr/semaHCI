@@ -39,12 +39,25 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
+
+    Button btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn = (Button)findViewById(R.id.button_input);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activityInput();
+            }
+        });
 
         if (getString(R.string.subscription_key).startsWith("Please")) {
             new AlertDialog.Builder(this)
@@ -94,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
-    public void activityInput(View v) {
+    public void activityInput() {
         Intent intent = new Intent(this, InputActivity.class);
         startActivity(intent);
     }

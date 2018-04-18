@@ -33,6 +33,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".InputActivity">
+
+        </activity>
+
+        <activity
+            android:name=".ResultsActivity"
+
+            ></activity>
+
         <activity
             android:name=".AnalyzeActivity"
             android:label="@string/title_activity_analyze"
