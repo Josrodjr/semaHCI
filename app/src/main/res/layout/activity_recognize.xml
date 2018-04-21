@@ -29,7 +29,8 @@
                 android:layout_width="139dp"
                 android:layout_height="wrap_content"
                 android:onClick="selectImage"
-                android:text="Seleccionar Imagen" />
+                android:text="Seleccionar Imagen"
+                style="@style/ButtonStyle" />
 
             <ImageView
                 android:id="@+id/selectedImage"
