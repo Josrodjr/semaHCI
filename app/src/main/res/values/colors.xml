@@ -4,4 +4,9 @@
     <color name="button_pressed_background">#66B2FF</color>
     <color name="button_enabled_background">#3399FF</color>
     <color name="button_disabled_background">#C0C0C0</color>
+    <color name="primary_material_dark">#2eb23c</color>
+    <color name="primary_dark_material_dark">#344c44</color>
+    <color name="background_material_light">#FFC1FFC7</color>
+    <color name="accent_material_light">#b21f4d</color>
+    <color name="primary_material_dark_1">#2eb23c</color>
 </resources>

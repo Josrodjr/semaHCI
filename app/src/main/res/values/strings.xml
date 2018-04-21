@@ -12,13 +12,13 @@
     <string name="title_activity_analyze">Analyze Image</string>
     <string name="title_activity_analyze_domain">Analyze Image In Domain</string>
     <string name="title_activity_describe">Describe Image</string>
-    <string name="title_activity_recognize">Recognize Text</string>
+    <string name="title_activity_recognize">Analizar por Imagen</string>
     <string name="title_activity_handwriting_recognize">Recognize Handwriting Text</string>
     <string name="title_activity_thumbnail">Thumbnail Image</string>
 
     <!-- Select image activity -->
-    <string name="select_an_image">Select an Image</string>
-    <string name="take_photo">Take a Photo</string>
-    <string name="select_image_in_album">From Gallery</string>
+    <string name="select_an_image">Selecciona una Imagen</string>
+    <string name="take_photo">Toma Una foto de la Etiqueta</string>
+    <string name="select_image_in_album">Selecciona de la Galleria</string>
 
 </resources>

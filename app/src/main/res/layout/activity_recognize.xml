@@ -18,18 +18,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="Select an image to recognize text"/>
+            android:text="Selecciona una etiqueta para analizarla" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Select Image"
                 android:id="@+id/buttonSelectImage"
-                android:onClick="selectImage"/>
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:onClick="selectImage"
+                android:text="Seleccionar Imagen" />
 
             <ImageView
                 android:id="@+id/selectedImage"

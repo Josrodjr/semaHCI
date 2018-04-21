@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="Select an image to recognize handwriting text"/>
+            android:text="Selecciona una imagen para escanear"/>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
@@ -27,7 +27,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select Image"
+                android:text="Seleccionar Imagen"
                 android:id="@+id/buttonSelectImage"
                 android:onClick="selectImage"
                 android:elevation="0dp" />

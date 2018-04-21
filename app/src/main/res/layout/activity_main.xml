@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="158dp"
-        android:text="Input" />
+        android:text="Ingresar datos manualmente" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -29,7 +29,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="200dp"
             android:onClick="activityRecognize"
-            android:text="Recognize Text" />
+            android:text="Escanear Etiqueta" />
 
     </LinearLayout>
 

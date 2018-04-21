@@ -160,7 +160,7 @@ public class HandwritingRecognizeActivity extends ActionBarActivity {
 
     public void doRecognize() {
         buttonSelectImage.setEnabled(false);
-        editText.setText("Analyzing...");
+        editText.setText("Procesando...");
 
         try {
             new doRequest(this).execute();
