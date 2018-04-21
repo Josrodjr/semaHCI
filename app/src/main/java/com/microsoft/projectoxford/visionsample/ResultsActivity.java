@@ -11,6 +11,8 @@ public class ResultsActivity extends AppCompatActivity {
 
     TextView txtPrueba;
     Button btn;
+    String test;
+    Float operation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,11 @@ public class ResultsActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtPrueba.setText(InputActivity.MyBundle.getString("3"));
+                test = InputActivity.MyBundle.getString("3");
+                operation = Float.parseFloat(test);
+                operation = operation*0.5f;
+                test = String.valueOf(operation);
+                txtPrueba.setText(test);
             }
         });
 
