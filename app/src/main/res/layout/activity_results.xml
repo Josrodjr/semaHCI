@@ -42,11 +42,19 @@
                     android:textSize="24sp" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btnEnergia"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Energía" />
+
+                <TextView
+                    android:id="@+id/txtEnergia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView" />
 
             </LinearLayout>
 
@@ -65,11 +73,19 @@
                     android:textSize="24sp" />
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/btnGrasas"
                     android:layout_width="match_parent"
                     android:layout_height="152dp"
                     android:layout_weight="1"
                     android:text="Grasas" />
+
+                <TextView
+                    android:id="@+id/txtGrasas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView" />
             </LinearLayout>
 
             <LinearLayout
@@ -117,11 +133,19 @@
                     android:textSize="24sp" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/btnAzucar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Button" />
+
+                <TextView
+                    android:id="@+id/txtAzucar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView" />
             </LinearLayout>
 
             <LinearLayout
@@ -139,11 +163,19 @@
                     android:textSize="24sp" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/btnSal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Button" />
+
+                <TextView
+                    android:id="@+id/txtSal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="TextView" />
             </LinearLayout>
 
             <LinearLayout
