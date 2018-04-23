@@ -41,7 +41,12 @@ public class ResultsActivity extends AppCompatActivity {
         btnAzucar = (Button)findViewById(R.id.btnAzucar);
         btnSal = (Button)findViewById(R.id.btnSal);
 
-        btnSaturadas.setBackgroundResource(R.drawable.doge);
+        //setear los botones a default
+        btnEnergy.setBackgroundResource(R.drawable.pnegra2);
+        btnGrasas.setBackgroundResource(R.drawable.pnegra2);
+        btnSaturadas.setBackgroundResource(R.drawable.pnegra2);
+        btnAzucar.setBackgroundResource(R.drawable.pnegra2);
+        btnSal.setBackgroundResource(R.drawable.pnegra2);
 
         //mapeo de textviews
         txtEnergy = (TextView)findViewById(R.id.txtEnergia);
