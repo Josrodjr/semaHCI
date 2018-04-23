@@ -80,7 +80,7 @@
         android:layout_toRightOf="@+id/textView5"
         android:ems="10"
         android:hint="Energía"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="12sp" />
 
     <TextView
@@ -149,7 +149,7 @@
         android:layout_alignStart="@+id/EnergyInput"
         android:ems="10"
         android:hint="Grasas"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="12sp" />
 
     <EditText
@@ -161,7 +161,7 @@
         android:layout_below="@+id/FatInput"
         android:ems="10"
         android:hint="Grasas Saturadas"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="12sp" />
 
     <EditText
@@ -173,7 +173,7 @@
         android:layout_below="@+id/SaturatedInput"
         android:ems="10"
         android:hint="Azúcares"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="12sp" />
 
     <EditText
@@ -185,7 +185,7 @@
         android:layout_below="@+id/SugarInput"
         android:ems="10"
         android:hint="Sal"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="12sp" />
 
     <Button
