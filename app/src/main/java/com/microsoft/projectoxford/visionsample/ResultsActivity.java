@@ -32,12 +32,16 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
+
+
         //mapeo de botones y textview de grasas saturadas
         btnEnergy =(Button)findViewById(R.id.btnEnergia);
         btnGrasas = (Button)findViewById(R.id.btnGrasas);
         btnSaturadas=(Button)findViewById(R.id.btnSaturadas);
         btnAzucar = (Button)findViewById(R.id.btnAzucar);
         btnSal = (Button)findViewById(R.id.btnSal);
+
+        btnSaturadas.setBackgroundResource(R.drawable.doge);
 
         //mapeo de textviews
         txtEnergy = (TextView)findViewById(R.id.txtEnergia);

@@ -21,6 +21,8 @@ public class InputActivity extends ActionBarActivity {
 
     Button ResultsButton;
 
+
+
     public static Bundle MyBundle = new Bundle();
 
 
@@ -35,6 +37,10 @@ public class InputActivity extends ActionBarActivity {
         SugarInput = (EditText)findViewById(R.id.SugarInput);
         SaltInput =(EditText)findViewById(R.id.SaltInput);
 
+
+        //prueba a ver si jala el id del boton en ResultsActivity
+
+
         ResultsButton = (Button)findViewById(R.id.button);
         ResultsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +51,8 @@ public class InputActivity extends ActionBarActivity {
                     saturates = Float.parseFloat(SaturatedInput.getText().toString());
                     sugars = Float.parseFloat(SugarInput.getText().toString());
                     salt = Float.parseFloat(SaltInput.getText().toString());
+
+
 
                     InputActivity.MyBundle.putString("1",String.valueOf(energy));
                     InputActivity.MyBundle.putString("2",String.valueOf(fat));
