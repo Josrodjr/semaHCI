@@ -7,13 +7,13 @@
 
     <Button
         android:id="@+id/button_input"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="158dp"
-        android:text="Ingresar datos manualmente"
-        style="@style/ButtonStyle" />
+        android:text=" Ingresar datos manualmente " />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -25,13 +25,13 @@
 
         <Button
             android:id="@+id/button_recognize"
+            style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="200dp"
             android:onClick="activityRecognize"
-            android:text="Escanear Etiqueta"
-            style="@style/ButtonStyle" />
+            android:text=" Escanear Etiqueta " />
 
     </LinearLayout>
 
