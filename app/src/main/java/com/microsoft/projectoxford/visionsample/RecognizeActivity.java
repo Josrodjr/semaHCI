@@ -41,10 +41,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -82,6 +85,14 @@ public class RecognizeActivity extends ActionBarActivity {
 
     private VisionServiceClient client;
 
+    Button btnfinal;
+
+    String result = "";
+
+    String[]lineas;
+
+    String delimitador = "\n";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +104,33 @@ public class RecognizeActivity extends ActionBarActivity {
 
         mButtonSelectImage = (Button)findViewById(R.id.buttonSelectImage);
         mEditText = (EditText)findViewById(R.id.editTextResult);
+
+        btnfinal = (Button) findViewById(R.id.buttonpresserino);
+
+        btnfinal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Log.d("welp", "onClick: " + result);
+                lineas = result.split(delimitador);
+
+                for (int i = 0; i < lineas.length; i++) {
+                    lineas[i] = lineas[i].toString().replaceAll("\\D+", "");
+                }
+
+                Log.println(Log.WARN, "Ok", lineas[0]);
+                Log.println(Log.WARN, "ok2", "BITCONNEEECT");
+                Log.println(Log.WARN, "Ok3", lineas[1]);
+
+                mEditText.setText("");
+
+                //flush
+                for (int i = 0; i < lineas.length; i++) {
+                    lineas[i] = "";
+                }
+                result = "";
+            }
+        });
+
     }
 
     @Override
@@ -216,7 +254,7 @@ public class RecognizeActivity extends ActionBarActivity {
                 Gson gson = new Gson();
                 OCR r = gson.fromJson(data, OCR.class);
 
-                String result = "";
+
                 for (Region reg : r.regions) {
                     for (Line line : reg.lines) {
                         for (Word word : line.words) {
@@ -225,6 +263,7 @@ public class RecognizeActivity extends ActionBarActivity {
                         result += "\n";
                     }
                     result += "\n\n";
+
                 }
 
                 mEditText.setText(result);
