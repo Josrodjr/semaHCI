@@ -60,13 +60,32 @@
                 android:id="@+id/editTextResult"
                 android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/buttonpresserino"
-                style="@style/ButtonStyle"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Presserino" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonpresserino"
+                    style="@style/ButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginLeft="35dp"
+                    android:text="Procesar" />
+
+                <Button
+                    android:id="@+id/buttonpresserino2"
+                    style="@style/ButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Continuar" />
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

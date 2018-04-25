@@ -44,6 +44,12 @@
             ></activity>
 
         <activity
+            android:name=".ResultsActivity2"
+
+            ></activity>
+
+
+        <activity
             android:name=".AnalyzeActivity"
             android:label="@string/title_activity_analyze"
             android:parentActivityName=".MainActivity" >

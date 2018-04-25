@@ -93,6 +93,8 @@ public class RecognizeActivity extends ActionBarActivity {
 
     String delimitador = "\n";
 
+    Button btnContinue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +108,15 @@ public class RecognizeActivity extends ActionBarActivity {
         mEditText = (EditText)findViewById(R.id.editTextResult);
 
         btnfinal = (Button) findViewById(R.id.buttonpresserino);
+
+        btnContinue = (Button)findViewById(R.id.buttonpresserino2);
+
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openResults2();
+            }
+        });
 
         btnfinal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,6 +141,13 @@ public class RecognizeActivity extends ActionBarActivity {
                 result = "";
             }
         });
+
+    }
+
+    public void openResults2() {
+
+        Intent intent = new Intent(this,ResultsActivity2.class);
+        startActivity(intent);
 
     }
 
