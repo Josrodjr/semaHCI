@@ -68,6 +68,9 @@ import java.io.IOException;
 
 public class RecognizeActivity extends ActionBarActivity {
 
+    //bundle
+    public static Bundle MyBundle2 = new Bundle();
+
     // Flag to indicate which task is to be performed.
     private static final int REQUEST_SELECT_IMAGE = 0;
 
@@ -115,6 +118,12 @@ public class RecognizeActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 openResults2();
+                //for(int a =0; a<lineas.length;a++){
+              //      Log.println(Log.WARN,"Ok",RecognizeActivity.MyBundle2.getString(String.valueOf("0")));
+               // Log.println(Log.WARN,"Ok",RecognizeActivity.MyBundle2.getString(String.valueOf("1")));
+               // Log.println(Log.WARN,"Ok",RecognizeActivity.MyBundle2.getString(String.valueOf("2")));
+               // Log.println(Log.WARN,"Ok",RecognizeActivity.MyBundle2.getString(String.valueOf("3")));
+              //  }
             }
         });
 
@@ -126,6 +135,7 @@ public class RecognizeActivity extends ActionBarActivity {
 
                 for (int i = 0; i < lineas.length; i++) {
                     lineas[i] = lineas[i].toString().replaceAll("\\D+", "");
+                    RecognizeActivity.MyBundle2.putString(String.valueOf(i),String.valueOf(lineas[i]));
                 }
 
                 Log.println(Log.WARN, "Ok", lineas[0]);

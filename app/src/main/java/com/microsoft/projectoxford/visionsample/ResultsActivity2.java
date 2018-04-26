@@ -2,6 +2,7 @@ package com.microsoft.projectoxford.visionsample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,9 @@ public class ResultsActivity2 extends AppCompatActivity {
     TextView txtSaturadas;
     TextView txtAzucar;
     TextView txtSal;
+
+    String kjE;
+    String grG;
 
     //valor de kJ totales que vamos a poner globales y editables mas tarde
     float dieta = 8000;
@@ -103,20 +107,44 @@ public class ResultsActivity2 extends AppCompatActivity {
 
         txtEnergy.setText("El porcentaje de Energia de producto es: " + openergia);
 */
+        try {
 
-        String kjE = InputActivity.MyBundle.getString("1");
-        String grG = InputActivity.MyBundle.getString("2");
-        String grGS = InputActivity.MyBundle.getString("3");
-        String grA = InputActivity.MyBundle.getString("4");
-        String grS = InputActivity.MyBundle.getString("5");
+            kjE = RecognizeActivity.MyBundle2.getString("0");
 
-        Float float_kjE = Float.parseFloat(kjE);
-        Float float_grG = Float.parseFloat(grG);
-        Float float_grGS = Float.parseFloat(grGS);
+
+        }catch (Exception e){
+
+            Log.println(Log.WARN,"unavailable","No available value on 0");
+
+        }
+
+        try {
+
+            grG = RecognizeActivity.MyBundle2.getString("1");
+
+        }catch (Exception e){
+
+            Log.println(Log.WARN,"unavailable","No available value on 1");
+
+        }
+
+        try {
+
+        }catch (Exception e){
+
+        }
+  /*
+     //   String grGS = RecognizeActivity.MyBundle2.getString("2");
+        String grA = RecognizeActivity.MyBundle2.getString("3");
+        String grS = RecognizeActivity.MyBundle2.getString("4");
+
+       // Float float_kjE = Float.parseFloat(kjE);
+     //   Float float_grG = Float.parseFloat(grG);
+    //   Float float_grGS = Float.parseFloat(grGS);
         Float float_grA = Float.parseFloat(grA);
         Float float_grS = Float.parseFloat(grS);
 
-        int colorEtiqG = getCapsula(float_grG, 1);
+      //  int colorEtiqG = getCapsula(float_grG, 1);
         int colorEtiqGS = getCapsula(float_grGS, 2);
         int colorEtiqA = getCapsula(float_grA, 3);
         int colorEtiqS = getCapsula(float_grS, 4);
@@ -166,7 +194,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               String kjenergia = InputActivity.MyBundle.getString("1");
+               String kjenergia = RecognizeActivity.MyBundle2.getString("0");
                Float openergia = Float.parseFloat(kjenergia);
 
                openergia = (openergia  * 100)/dieta;
@@ -179,7 +207,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grgrasas = InputActivity.MyBundle.getString("2");
+                String grgrasas = RecognizeActivity.MyBundle2.getString("1");
                 Float kjgrasas = Float.parseFloat(grgrasas);
                 kjgrasas = (kjgrasas * 37 * 100)/dieta;
 
@@ -191,7 +219,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grsaturadas = InputActivity.MyBundle.getString("3");
+                String grsaturadas = RecognizeActivity.MyBundle2.getString("2");
                 Float kjsaturadas = Float.parseFloat(grsaturadas);
                 kjsaturadas = (kjsaturadas * 25 * 100)/dieta;
 
@@ -204,7 +232,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grazucares = InputActivity.MyBundle.getString("4");
+                String grazucares = RecognizeActivity.MyBundle2.getString("3");
                 Float kjazucares = Float.parseFloat(grazucares);
                 kjazucares = (kjazucares * 17 * 100)/dieta;
 
@@ -217,7 +245,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grsal = InputActivity.MyBundle.getString("5");
+                String grsal = RecognizeActivity.MyBundle2.getString("4");
                 Float kjsal = Float.parseFloat(grsal);
                 kjsal = (kjsal * 37 * 100)/dieta;
 
@@ -226,7 +254,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             }
         });
 
-
+*/
             }
 
 
