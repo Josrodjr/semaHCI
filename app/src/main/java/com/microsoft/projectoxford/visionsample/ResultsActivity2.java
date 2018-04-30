@@ -16,6 +16,10 @@ public class ResultsActivity2 extends AppCompatActivity {
     Button btnAzucar;
     Button btnSal;
 
+    Float float_kjE;
+
+    java.util.Random rand = new java.util.Random();
+
 
     //Textviews de todos excepto grasas saturadas
     TextView txtEnergy;
@@ -26,6 +30,9 @@ public class ResultsActivity2 extends AppCompatActivity {
 
     String kjE;
     String grG;
+    String grGS;
+    String grA;
+    String grS;
 
     //valor de kJ totales que vamos a poner globales y editables mas tarde
     float dieta = 8000;
@@ -107,44 +114,32 @@ public class ResultsActivity2 extends AppCompatActivity {
 
         txtEnergy.setText("El porcentaje de Energia de producto es: " + openergia);
 */
-        try {
-
-            kjE = RecognizeActivity.MyBundle2.getString("0");
 
 
-        }catch (Exception e){
+        kjE = String.valueOf(rand.nextInt(10)+3);
 
-            Log.println(Log.WARN,"unavailable","No available value on 0");
 
-        }
 
-        try {
 
-            grG = RecognizeActivity.MyBundle2.getString("1");
 
-        }catch (Exception e){
 
-            Log.println(Log.WARN,"unavailable","No available value on 1");
+        grG = String.valueOf(rand.nextInt(5));
 
-        }
 
-        try {
 
-        }catch (Exception e){
 
-        }
-  /*
-     //   String grGS = RecognizeActivity.MyBundle2.getString("2");
-        String grA = RecognizeActivity.MyBundle2.getString("3");
-        String grS = RecognizeActivity.MyBundle2.getString("4");
 
-       // Float float_kjE = Float.parseFloat(kjE);
-     //   Float float_grG = Float.parseFloat(grG);
-    //   Float float_grGS = Float.parseFloat(grGS);
+        grGS = String.valueOf(rand.nextInt(5));
+        grA = String.valueOf(rand.nextInt(5)+1);
+        grS = String.valueOf(rand.nextInt(5)+1);
+
+        float_kjE = Float.parseFloat(kjE);
+        Float float_grG = Float.parseFloat(grG);
+        Float float_grGS = Float.parseFloat(grGS);
         Float float_grA = Float.parseFloat(grA);
         Float float_grS = Float.parseFloat(grS);
 
-      //  int colorEtiqG = getCapsula(float_grG, 1);
+        int colorEtiqG = getCapsula(float_grG, 1);
         int colorEtiqGS = getCapsula(float_grGS, 2);
         int colorEtiqA = getCapsula(float_grA, 3);
         int colorEtiqS = getCapsula(float_grS, 4);
@@ -194,7 +189,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               String kjenergia = RecognizeActivity.MyBundle2.getString("0");
+               String kjenergia = String.valueOf(kjE);
                Float openergia = Float.parseFloat(kjenergia);
 
                openergia = (openergia  * 100)/dieta;
@@ -207,7 +202,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grgrasas = RecognizeActivity.MyBundle2.getString("1");
+                String grgrasas = String.valueOf(grG);
                 Float kjgrasas = Float.parseFloat(grgrasas);
                 kjgrasas = (kjgrasas * 37 * 100)/dieta;
 
@@ -219,7 +214,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grsaturadas = RecognizeActivity.MyBundle2.getString("2");
+                String grsaturadas = String.valueOf(grGS);
                 Float kjsaturadas = Float.parseFloat(grsaturadas);
                 kjsaturadas = (kjsaturadas * 25 * 100)/dieta;
 
@@ -232,7 +227,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grazucares = RecognizeActivity.MyBundle2.getString("3");
+                String grazucares = String.valueOf(grA);
                 Float kjazucares = Float.parseFloat(grazucares);
                 kjazucares = (kjazucares * 17 * 100)/dieta;
 
@@ -245,7 +240,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String grsal = RecognizeActivity.MyBundle2.getString("4");
+                String grsal = String.valueOf(grS);
                 Float kjsal = Float.parseFloat(grsal);
                 kjsal = (kjsal * 37 * 100)/dieta;
 
@@ -254,7 +249,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             }
         });
 
-*/
+
             }
 
 
