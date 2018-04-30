@@ -114,6 +114,9 @@ public class RecognizeActivity extends ActionBarActivity {
 
         btnContinue = (Button)findViewById(R.id.buttonpresserino2);
 
+        btnContinue.setEnabled(false);
+        btnfinal.setEnabled(false);
+
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,6 +134,7 @@ public class RecognizeActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 //Log.d("welp", "onClick: " + result);
+                btnContinue.setEnabled(true);
                 lineas = result.split(delimitador);
 
                 for (int i = 0; i < lineas.length; i++) {
@@ -272,6 +276,7 @@ public class RecognizeActivity extends ActionBarActivity {
 
         @Override
         protected void onPostExecute(String data) {
+
             super.onPostExecute(data);
             // Display based on error existence
 
@@ -297,6 +302,7 @@ public class RecognizeActivity extends ActionBarActivity {
                 mEditText.setText(result);
             }
             mButtonSelectImage.setEnabled(true);
+            btnfinal.setEnabled(true);
         }
     }
 }
