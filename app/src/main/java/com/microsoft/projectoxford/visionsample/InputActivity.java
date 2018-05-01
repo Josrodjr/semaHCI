@@ -19,6 +19,11 @@ public class InputActivity extends ActionBarActivity {
     EditText SugarInput;
     EditText SaltInput;
 
+    //Volver visible nuevamente el EditText y Boton de MainActivity encargado de Ingreso calorias
+    EditText txtIngest;
+    Button btnIngest;
+
+
     Button ResultsButton;
 
 
@@ -36,6 +41,10 @@ public class InputActivity extends ActionBarActivity {
         SaturatedInput = (EditText)findViewById(R.id.SaturatedInput);
         SugarInput = (EditText)findViewById(R.id.SugarInput);
         SaltInput =(EditText)findViewById(R.id.SaltInput);
+
+       InputActivity.MyBundle.putString("90","1");
+
+
 
 
         //prueba a ver si jala el id del boton en ResultsActivity

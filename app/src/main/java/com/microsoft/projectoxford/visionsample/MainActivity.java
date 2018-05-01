@@ -36,14 +36,28 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.io.Console;
 
 public class MainActivity extends ActionBarActivity {
 
+    public static Bundle MyBundle3 = new Bundle();
+
     Button btn;
+    Button btnIngesta;
+
+    EditText txtIngesta;
+
+    String Ingesta;
+
+    Float Peace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +66,46 @@ public class MainActivity extends ActionBarActivity {
 
         btn = (Button)findViewById(R.id.button_input);
 
+
+        btnIngesta = (Button)findViewById(R.id.btnIngesta);
+
+        txtIngesta = (EditText)findViewById(R.id.TxtIngesta);
+
+
+            btnIngesta.setEnabled(true);
+            txtIngesta.setEnabled(true);
+            btnIngesta.setVisibility(View.VISIBLE);
+            txtIngesta.setVisibility(View.VISIBLE);
+
+
+
+
+
+        btnIngesta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Peace = Float.valueOf(txtIngesta.getText().toString());
+                    Ingesta = String.valueOf(Peace);
+                    MainActivity.MyBundle3.putString("0",Ingesta);
+                    txtIngesta.setText("");
+                    Toast.makeText(MainActivity.this,"Datos tomados con éxito!",Toast.LENGTH_SHORT).show();
+
+
+
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this,"Ingresa algo en el campo superior por favor",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 activityInput();
+
             }
         });
 
@@ -69,7 +119,10 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+
     @Override
+
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
