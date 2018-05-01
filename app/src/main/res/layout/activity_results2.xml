@@ -24,7 +24,8 @@
                 android:text="Resultados"
                 android:textColor="@android:color/background_dark"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Energia"
-
+                    android:fontFamily="@font/roboto"
                     android:textSize="24sp" />
 
                 <Button
@@ -53,6 +54,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:fontFamily="@font/roboto"
                     android:text="placeholder" />
 
             </LinearLayout>
@@ -69,7 +71,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Grasas"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/roboto"/>
 
                 <Button
                     android:id="@+id/btnGrasas"
@@ -83,6 +86,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:fontFamily="@font/roboto"
                     android:text="placeholder" />
             </LinearLayout>
 
@@ -98,7 +102,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Grasas Saturadas"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/roboto"/>
 
                 <Button
                     android:id="@+id/btnSaturadas"
@@ -112,6 +117,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:fontFamily="@font/roboto"
                     android:text="     placeholder          " />
             </LinearLayout>
 
@@ -127,7 +133,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Azúcares"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/roboto"/>
 
                 <Button
                     android:id="@+id/btnAzucar"
@@ -141,6 +148,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:fontFamily="@font/roboto"
                     android:text="placeholder" />
             </LinearLayout>
 
@@ -156,7 +164,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Sal"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:fontFamily="@font/roboto"/>
 
                 <Button
                     android:id="@+id/btnSal"
@@ -170,6 +179,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:fontFamily="@font/roboto"
                     android:text="placeholder" />
             </LinearLayout>
 
