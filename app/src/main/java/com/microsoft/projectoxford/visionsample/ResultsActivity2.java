@@ -35,7 +35,7 @@ public class ResultsActivity2 extends AppCompatActivity {
     String grS;
 
     //valor de kJ totales que vamos a poner globales y editables mas tarde
-    float dieta = 8000;
+    float dieta = 0;
 
     public int getCapsula(float gramos, int aplicacion){
         int color = 0;
@@ -115,51 +115,26 @@ public class ResultsActivity2 extends AppCompatActivity {
         txtEnergy.setText("El porcentaje de Energia de producto es: " + openergia);
 */
 
-        try {
-            kjE = String.valueOf(RecognizeActivity.MyBundle2.getString("0"));
-        }catch (Exception e){
-            kjE = String.valueOf(rand.nextInt(10) + 3);
-        }
+        String dietastr = MainActivity.MyBundle3.getString("0");
 
-        try {
-            grG = String.valueOf(RecognizeActivity.MyBundle2.getString("1"));
-        }catch (Exception e){
-            grG = String.valueOf(rand.nextInt(5));
-        }
-
-        try {
-            grGS = String.valueOf(RecognizeActivity.MyBundle2.getString("2"));
-        }catch (Exception e){
-            grGS = String.valueOf(rand.nextInt(5));
-        }
-
-        try {
-            grA = String.valueOf(RecognizeActivity.MyBundle2.getString("3"));
-        }catch (Exception e){
-            grA = String.valueOf(rand.nextInt(5)+1);
-        }
-
-        try {
-            grS = String.valueOf(RecognizeActivity.MyBundle2.getString("4"));
-        }catch (Exception e){
-            grS = String.valueOf(rand.nextInt(5)+1);
-        }
+        kjE = String.valueOf(rand.nextInt(10)+3);
 
 
 
 
 
 
+        grG = String.valueOf(rand.nextInt(5));
 
 
 
 
 
+        grGS = String.valueOf(rand.nextInt(5));
+        grA = String.valueOf(rand.nextInt(5)+1);
+        grS = String.valueOf(rand.nextInt(5)+1);
 
-
-
-
-
+        dieta = Float.parseFloat(dietastr);
 
         float_kjE = Float.parseFloat(kjE);
         Float float_grG = Float.parseFloat(grG);

@@ -23,8 +23,9 @@
                 android:layout_height="wrap_content"
                 android:text="Resultados"
                 android:textColor="@android:color/background_dark"
-                android:textSize="24sp"
+                android:textSize="14pt"
                 android:textStyle="bold"
+                android:gravity="center_horizontal"
                 android:fontFamily="@font/roboto"/>
 
             <LinearLayout
@@ -40,7 +41,7 @@
                     android:gravity="center"
                     android:text="Energia"
                     android:fontFamily="@font/roboto"
-                    android:textSize="24sp" />
+                    android:textSize="10pt" />
 
                 <Button
                     android:id="@+id/btnEnergia"
@@ -53,9 +54,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="placeholder"
-                    android:fontFamily="@font/roboto"/>
+                    android:textSize="8pt"
+                    android:text="                   " />
 
             </LinearLayout>
 
@@ -71,7 +73,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Grasas"
-                    android:textSize="24sp"
+                    android:textSize="10pt"
                     android:fontFamily="@font/roboto"/>
 
                 <Button
@@ -85,9 +87,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:fontFamily="@font/roboto"
-                    android:text="placeholder" />
+                    android:gravity="center"
+                    android:textSize="8pt"
+                    android:text="                   " />
             </LinearLayout>
 
             <LinearLayout
@@ -102,7 +105,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Grasas Saturadas"
-                    android:textSize="24sp"
+                    android:textSize="10pt"
                     android:fontFamily="@font/roboto"/>
 
                 <Button
@@ -116,9 +119,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:fontFamily="@font/roboto"
-                    android:text="     placeholder          " />
+                    android:gravity="center"
+                    android:textSize="8pt"
+                    android:text="                                  " />
             </LinearLayout>
 
             <LinearLayout
@@ -133,7 +137,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Azúcares"
-                    android:textSize="24sp"
+                    android:textSize="10pt"
                     android:fontFamily="@font/roboto"/>
 
                 <Button
@@ -147,9 +151,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="placeholder"
-                    android:fontFamily="@font/roboto"/>
+                    android:textSize="8pt"
+                    android:text="                   " />
             </LinearLayout>
 
             <LinearLayout
@@ -164,7 +169,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="Sal"
-                    android:textSize="24sp"
+                    android:textSize="10pt"
                     android:fontFamily="@font/roboto"/>
 
                 <Button
@@ -178,9 +183,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
                     android:gravity="center"
-                    android:text="placeholder"
-                    android:fontFamily="@font/roboto"/>
+                    android:textSize="8pt"
+                    android:text="                   " />
             </LinearLayout>
 
             <LinearLayout
