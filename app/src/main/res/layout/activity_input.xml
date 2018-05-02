@@ -189,11 +189,12 @@
         android:textSize="12sp" />
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="137dp"
         android:text="Resultados" />
 </android.widget.RelativeLayout>
