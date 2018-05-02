@@ -35,7 +35,7 @@ public class ResultsActivity2 extends AppCompatActivity {
     String grS;
 
     //valor de kJ totales que vamos a poner globales y editables mas tarde
-    float dieta = 8000;
+    float dieta = 0;
 
     public int getCapsula(float gramos, int aplicacion){
         int color = 0;
@@ -115,6 +115,7 @@ public class ResultsActivity2 extends AppCompatActivity {
         txtEnergy.setText("El porcentaje de Energia de producto es: " + openergia);
 */
 
+        String dietastr = MainActivity.MyBundle3.getString("0");
 
         kjE = String.valueOf(rand.nextInt(10)+3);
 
@@ -132,6 +133,8 @@ public class ResultsActivity2 extends AppCompatActivity {
         grGS = String.valueOf(rand.nextInt(5));
         grA = String.valueOf(rand.nextInt(5)+1);
         grS = String.valueOf(rand.nextInt(5)+1);
+
+        dieta = Float.parseFloat(dietastr);
 
         float_kjE = Float.parseFloat(kjE);
         Float float_grG = Float.parseFloat(grG);

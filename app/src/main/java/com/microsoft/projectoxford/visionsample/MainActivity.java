@@ -51,6 +51,7 @@ public class MainActivity extends ActionBarActivity {
     public static Bundle MyBundle3 = new Bundle();
 
     Button btn;
+    Button btn2;
     Button btnIngesta;
 
     EditText txtIngesta;
@@ -65,7 +66,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         btn = (Button)findViewById(R.id.button_input);
-
+        btn2 = (Button)findViewById(R.id.button_recognize);
 
         btnIngesta = (Button)findViewById(R.id.btnIngesta);
 
@@ -78,7 +79,8 @@ public class MainActivity extends ActionBarActivity {
             txtIngesta.setVisibility(View.VISIBLE);
 
 
-
+        btn.setEnabled(false);
+        btn2.setEnabled(false);
 
 
         btnIngesta.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +93,9 @@ public class MainActivity extends ActionBarActivity {
                     txtIngesta.setText("");
                     Toast.makeText(MainActivity.this,"Datos tomados con éxito!",Toast.LENGTH_SHORT).show();
 
+
+                    btn.setEnabled(true);
+                    btn2.setEnabled(true);
 
 
                 }catch (Exception e){
