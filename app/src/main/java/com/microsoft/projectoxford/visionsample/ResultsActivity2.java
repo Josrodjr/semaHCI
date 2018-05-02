@@ -34,8 +34,18 @@ public class ResultsActivity2 extends AppCompatActivity {
     String grA;
     String grS;
 
+    Float float_grG;
+    Float float_grGS;
+    Float float_grA;
+    Float float_grS;
+
+    int colorEtiqG;
+    int colorEtiqGS;
+    int  colorEtiqA;
+    int colorEtiqS;
+
     //valor de kJ totales que vamos a poner globales y editables mas tarde
-    float dieta = 0;
+    float dieta;
 
     public int getCapsula(float gramos, int aplicacion){
         int color = 0;
@@ -116,36 +126,62 @@ public class ResultsActivity2 extends AppCompatActivity {
 */
 
         String dietastr = MainActivity.MyBundle3.getString("0");
+        try {
+            kjE = String.valueOf(RecognizeActivity.MyBundle2.getString("0"));
+            float_kjE = Float.parseFloat(kjE);
 
-        kjE = String.valueOf(rand.nextInt(10)+3);
+        }catch (Exception e){
+            kjE = String.valueOf(rand.nextInt(10) + 3);
+            float_kjE = Float.parseFloat(kjE);
+        }
+
+        try {
+            grG = String.valueOf(RecognizeActivity.MyBundle2.getString("1"));
+            float_grG = Float.parseFloat(grG);
+
+        }catch (Exception e){
+            grG = String.valueOf(rand.nextInt(5));
+            float_grG = Float.parseFloat(grG);
+        }
+
+        try {
+            grGS = String.valueOf(RecognizeActivity.MyBundle2.getString("2"));
+            float_grGS = Float.parseFloat(grGS);
+
+        }catch (Exception e){
+            grGS = String.valueOf(rand.nextInt(5));
+            float_grGS = Float.parseFloat(grGS);
+
+        }
+
+        try {
+            grA = String.valueOf(RecognizeActivity.MyBundle2.getString("3"));
+            float_grA = Float.parseFloat(grA);
+
+        }catch (Exception e){
+            grA = String.valueOf(rand.nextInt(5)+1);
+            float_grA = Float.parseFloat(grA);
+        }
+
+        try {
+            grS = String.valueOf(RecognizeActivity.MyBundle2.getString("4"));
+            float_grS = Float.parseFloat(grS);
+        }catch (Exception e){
+            grS = String.valueOf(rand.nextInt(5)+1);
+            float_grS = Float.parseFloat(grS);
+        }
+
+            
+                dieta = Float.parseFloat(dietastr);
 
 
 
 
+                colorEtiqG = getCapsula(float_grG, 1);
+                colorEtiqGS = getCapsula(float_grGS, 2);
+                colorEtiqA = getCapsula(float_grA, 3);
+                colorEtiqS = getCapsula(float_grS, 4);
 
-
-        grG = String.valueOf(rand.nextInt(5));
-
-
-
-
-
-        grGS = String.valueOf(rand.nextInt(5));
-        grA = String.valueOf(rand.nextInt(5)+1);
-        grS = String.valueOf(rand.nextInt(5)+1);
-
-        dieta = Float.parseFloat(dietastr);
-
-        float_kjE = Float.parseFloat(kjE);
-        Float float_grG = Float.parseFloat(grG);
-        Float float_grGS = Float.parseFloat(grGS);
-        Float float_grA = Float.parseFloat(grA);
-        Float float_grS = Float.parseFloat(grS);
-
-        int colorEtiqG = getCapsula(float_grG, 1);
-        int colorEtiqGS = getCapsula(float_grGS, 2);
-        int colorEtiqA = getCapsula(float_grA, 3);
-        int colorEtiqS = getCapsula(float_grS, 4);
 
         if(colorEtiqG == 1){
             btnGrasas.setBackgroundResource(R.drawable.pverde2);
