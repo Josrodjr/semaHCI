@@ -12,42 +12,77 @@
     android:orientation="vertical"
     tools:context="com.microsoft.projectoxford.visionsample.helper.SelectImageActivity">
 
-    <RelativeLayout android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="706dp"
         android:layout_weight="2">
 
         <TextView
             android:id="@+id/info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_above="@+id/button_take_a_photo"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center" />
 
         <Button
             android:id="@+id/button_take_a_photo"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/take_photo"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="54dp"
+            android:fontFamily="@font/roboto"
             android:onClick="takePhoto"
-            style="@style/ButtonStyle" />
+            android:text="@string/take_photo"
+            android:textAllCaps="false"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="¡Toma una foto de la etiqueta utilizando la camara de tu dispositivo móvil!"
+            android:textStyle="italic"
+            android:textSize="8pt"
+            android:fontFamily="@font/roboto"/>
     </RelativeLayout>
 
-    <RelativeLayout android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
         <Button
             android:id="@+id/button_select_a_photo_in_album"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/select_image_in_album"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/roboto"
             android:onClick="selectImageInAlbum"
-            style="@style/ButtonStyle" />
+            android:text="Selecciona de la Galería"
+            android:textAllCaps="false"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="27dp"
+            android:text="¡Selecciona una imagen de una etiqueta de la galeria de tu dispositivo móvil!"
+            android:textStyle="italic"
+            android:textSize="8pt"
+            android:fontFamily="@font/roboto"/>
     </RelativeLayout>
 
 </LinearLayout>

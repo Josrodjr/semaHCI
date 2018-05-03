@@ -14,7 +14,11 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="96dp"
-        android:text=" Ingresar datos manualmente " />
+        android:text=" Ingresar datos manualmente "
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="10pt"
+        android:fontFamily="@font/roboto"/>
 
     <Button
         android:id="@+id/button_recognize"
@@ -26,7 +30,11 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="177dp"
         android:onClick="activityRecognize"
-        android:text=" Escanear Etiqueta " />
+        android:text=" Escanear Etiqueta "
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="10pt"
+        android:fontFamily="@font/roboto"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -38,12 +46,15 @@
 
         <EditText
             android:id="@+id/TxtIngesta"
-            android:layout_width="match_parent"
+            android:layout_width="339dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:ems="10"
             android:hint="Ingresa tu ingesta de calorías diarias!"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textSize="8pt"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto"/>
 
         <Button
             android:id="@+id/btnIngesta"
@@ -52,7 +63,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Enviar" />
+            android:text="Enviar"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="10pt"
+            android:fontFamily="@font/roboto"/>
 
     </LinearLayout>
 
