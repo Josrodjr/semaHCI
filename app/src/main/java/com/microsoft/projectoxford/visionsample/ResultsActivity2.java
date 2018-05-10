@@ -171,7 +171,7 @@ public class ResultsActivity2 extends AppCompatActivity {
             float_grS = Float.parseFloat(grS);
         }
 
-            
+
                 dieta = Float.parseFloat(dietastr);
 
 

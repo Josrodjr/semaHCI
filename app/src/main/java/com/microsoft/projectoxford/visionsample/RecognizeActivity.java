@@ -49,6 +49,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.microsoft.projectoxford.vision.VisionServiceClient;
@@ -98,6 +99,8 @@ public class RecognizeActivity extends ActionBarActivity {
 
     Button btnContinue;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,7 +123,9 @@ public class RecognizeActivity extends ActionBarActivity {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openResults2();
+
+                    openResults2();
+
                 //for(int a =0; a<lineas.length;a++){
               //      Log.println(Log.WARN,"Ok",RecognizeActivity.MyBundle2.getString(String.valueOf("0")));
                // Log.println(Log.WARN,"Ok",RecognizeActivity.MyBundle2.getString(String.valueOf("1")));
@@ -133,26 +138,33 @@ public class RecognizeActivity extends ActionBarActivity {
         btnfinal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Log.d("welp", "onClick: " + result);
-                btnContinue.setEnabled(true);
-                lineas = result.split(delimitador);
+                try {
+                    //Log.d("welp", "onClick: " + result);
 
-                for (int i = 0; i < lineas.length; i++) {
-                    lineas[i] = lineas[i].toString().replaceAll("\\D+", "");
-                    RecognizeActivity.MyBundle2.putString(String.valueOf(i),String.valueOf(lineas[i]));
+                    lineas = result.split(delimitador);
+
+                    for (int i = 0; i < lineas.length; i++) {
+                        lineas[i] = lineas[i].toString().replaceAll("\\D+", "");
+                        RecognizeActivity.MyBundle2.putString(String.valueOf(i), String.valueOf(lineas[i]));
+                    }
+
+                    Log.println(Log.WARN, "Ok", lineas[0]);
+                    Log.println(Log.WARN, "ok2", "BITCONNEEECT");
+                    Log.println(Log.WARN, "Ok3", lineas[1]);
+
+                    mEditText.setText("");
+                    btnfinal.setEnabled(false);
+                    btnContinue.setEnabled(true);
+
+                    //flush
+                    for (int i = 0; i < lineas.length; i++) {
+                        lineas[i] = "";
+                    }
+                    result = "";
+                }catch (Exception e){
+                    Toast.makeText(RecognizeActivity.this,"No se tomaron suficientes datos, vuelve a tomar foto por favor",Toast.LENGTH_LONG).show();
+
                 }
-
-                Log.println(Log.WARN, "Ok", lineas[0]);
-                Log.println(Log.WARN, "ok2", "BITCONNEEECT");
-                Log.println(Log.WARN, "Ok3", lineas[1]);
-
-                mEditText.setText("");
-
-                //flush
-                for (int i = 0; i < lineas.length; i++) {
-                    lineas[i] = "";
-                }
-                result = "";
             }
         });
 
