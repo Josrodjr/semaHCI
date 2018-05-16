@@ -30,15 +30,15 @@
 
             <Button
                 android:id="@+id/buttonSelectImage"
+                style="@style/ButtonStyle"
                 android:layout_width="139dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
                 android:onClick="selectImage"
-                android:text="Seleccionar Imagen"
-                style="@style/ButtonStyle"
+                android:text="Cámara"
                 android:textAllCaps="false"
-                android:textStyle="bold"
                 android:textSize="10pt"
-                android:fontFamily="@font/roboto"/>
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/selectedImage"
