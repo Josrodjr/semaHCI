@@ -184,7 +184,6 @@
         android:textStyle="bold"
         android:textSize="10pt"
         android:fontFamily="@font/roboto"
-        android:background="@layout/rounded_button_settings"
         />
 
     <Spinner

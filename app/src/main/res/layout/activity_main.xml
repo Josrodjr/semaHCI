@@ -5,6 +5,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
+
+    <!-- android:background="@layout/rounded_button_settings" -->
+
     <Button
         android:id="@+id/button_input"
         style="@style/ButtonStyle"
@@ -19,7 +22,6 @@
         android:textAllCaps="false"
         android:textSize="10pt"
         android:fontFamily="@font/roboto"
-        android:background="@layout/rounded_button_settings"
         />
 
     <Button
@@ -31,7 +33,6 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="184dp"
-        android:background="@layout/rounded_button_settings"
         android:fontFamily="@font/roboto"
         android:onClick="activityRecognize"
         android:text=" Escanear Etiqueta "
@@ -66,7 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@layout/rounded_button_settings"
             android:fontFamily="@font/roboto"
             android:text="Enviar"
             android:textAllCaps="false"

@@ -39,7 +39,6 @@
             android:textAllCaps="false"
             android:textSize="10pt"
             android:textStyle="bold"
-            android:background="@layout/rounded_button_settings"
             />
 
         <TextView
@@ -73,7 +72,6 @@
             android:textAllCaps="false"
             android:textSize="10pt"
             android:textStyle="bold"
-            android:background="@layout/rounded_button_settings"
             />
 
         <TextView
