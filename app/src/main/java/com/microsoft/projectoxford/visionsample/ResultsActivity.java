@@ -177,7 +177,7 @@ public class ResultsActivity extends AppCompatActivity {
 
                openergia = (openergia  * 100)/dieta;
 
-               txtEnergy.setText("El porcentaje de Energia de producto es: " + openergia);
+               txtEnergy.setText("Porcentaje de Energia : " + openergia + "%");
             }
         });
 
@@ -189,7 +189,7 @@ public class ResultsActivity extends AppCompatActivity {
                 Float kjgrasas = Float.parseFloat(grgrasas);
                 kjgrasas = (kjgrasas * 37 * 100)/dieta;
 
-                txtGrasas.setText("El porcentaje de grasas de este producto es: " + kjgrasas);
+                txtGrasas.setText("Porcentaje de grasas : " + kjgrasas + "%");
             }
         });
 
@@ -201,7 +201,7 @@ public class ResultsActivity extends AppCompatActivity {
                 Float kjsaturadas = Float.parseFloat(grsaturadas);
                 kjsaturadas = (kjsaturadas * 25 * 100)/dieta;
 
-                txtSaturadas.setText("El porcentaje de grasas saturadas de este producto es: " + kjsaturadas);
+                txtSaturadas.setText("Porcentaje de Carbohidratos : " + kjsaturadas + "%");
 
             }
         });
@@ -214,7 +214,7 @@ public class ResultsActivity extends AppCompatActivity {
                 Float kjazucares = Float.parseFloat(grazucares);
                 kjazucares = (kjazucares * 17 * 100)/dieta;
 
-                txtAzucar.setText("El porcentaje de azucares de este producto es: " + kjazucares);
+                txtAzucar.setText("Porcentaje de azucares : " + kjazucares + "%");
 
             }
         });
@@ -227,7 +227,7 @@ public class ResultsActivity extends AppCompatActivity {
                 Float kjsal = Float.parseFloat(grsal);
                 kjsal = (kjsal * 37 * 100)/dieta;
 
-                txtSal.setText("El porcentaje de sodio de este producto es: " + kjsal);
+                txtSal.setText("Porcentaje de sodio : " + kjsal + "%");
 
             }
         });

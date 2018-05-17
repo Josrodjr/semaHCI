@@ -18,7 +18,9 @@
         android:textStyle="bold"
         android:textAllCaps="false"
         android:textSize="10pt"
-        android:fontFamily="@font/roboto"/>
+        android:fontFamily="@font/roboto"
+        android:background="@layout/rounded_button_settings"
+        />
 
     <Button
         android:id="@+id/button_recognize"
@@ -28,13 +30,14 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="177dp"
+        android:layout_marginBottom="184dp"
+        android:background="@layout/rounded_button_settings"
+        android:fontFamily="@font/roboto"
         android:onClick="activityRecognize"
         android:text=" Escanear Etiqueta "
-        android:textStyle="bold"
         android:textAllCaps="false"
         android:textSize="10pt"
-        android:fontFamily="@font/roboto"/>
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -44,17 +47,17 @@
         android:weightSum="1">
 
 
-        <EditText
+        <AutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/TxtIngesta"
             android:layout_width="339dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="Ingresa tu ingesta de calorías diarias!"
             android:inputType="numberDecimal"
             android:textSize="8pt"
-            android:textStyle="normal"
-            android:fontFamily="@font/roboto"/>
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/btnIngesta"
@@ -63,11 +66,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:background="@layout/rounded_button_settings"
+            android:fontFamily="@font/roboto"
             android:text="Enviar"
             android:textAllCaps="false"
-            android:textStyle="bold"
             android:textSize="10pt"
-            android:fontFamily="@font/roboto"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 

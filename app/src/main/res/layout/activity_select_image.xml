@@ -38,7 +38,9 @@
             android:text="@string/take_photo"
             android:textAllCaps="false"
             android:textSize="10pt"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@layout/rounded_button_settings"
+            />
 
         <TextView
             android:id="@+id/textView17"
@@ -70,7 +72,9 @@
             android:text="Selecciona de la Galería"
             android:textAllCaps="false"
             android:textSize="10pt"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="@layout/rounded_button_settings"
+            />
 
         <TextView
             android:id="@+id/textView18"

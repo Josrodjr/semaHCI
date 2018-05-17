@@ -40,6 +40,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -54,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
     Button btn2;
     Button btnIngesta;
 
-    EditText txtIngesta;
+    AutoCompleteTextView txtIngesta;
 
     String Ingesta;
 
@@ -70,8 +72,8 @@ public class MainActivity extends ActionBarActivity {
 
         btnIngesta = (Button)findViewById(R.id.btnIngesta);
 
-        txtIngesta = (EditText)findViewById(R.id.TxtIngesta);
-
+        txtIngesta = (AutoCompleteTextView) findViewById(R.id.TxtIngesta);
+        String[] diets = getResources().getStringArray(R.array.diets);
 
             btnIngesta.setEnabled(true);
             txtIngesta.setEnabled(true);
@@ -82,6 +84,8 @@ public class MainActivity extends ActionBarActivity {
         btn.setEnabled(false);
         btn2.setEnabled(false);
 
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, diets);
+        txtIngesta.setAdapter(adapter);
 
         btnIngesta.setOnClickListener(new View.OnClickListener() {
             @Override

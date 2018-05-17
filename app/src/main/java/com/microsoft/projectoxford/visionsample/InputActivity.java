@@ -5,8 +5,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class InputActivity extends ActionBarActivity {
@@ -26,6 +28,13 @@ public class InputActivity extends ActionBarActivity {
 
     Button ResultsButton;
 
+    //Los spinners
+
+    Spinner spinnerE;
+    Spinner spinnerG;
+    Spinner spinnerGR;
+    Spinner spinnerA;
+    Spinner spinnerS;
 
 
     public static Bundle MyBundle = new Bundle();
@@ -44,8 +53,24 @@ public class InputActivity extends ActionBarActivity {
 
        InputActivity.MyBundle.putString("90","1");
 
+        spinnerE = (Spinner)findViewById(R.id.spinnerE);
+        spinnerG = (Spinner)findViewById(R.id.spinnerG);
+        spinnerGR = (Spinner)findViewById(R.id.spinnerGR);
+        spinnerA = (Spinner)findViewById(R.id.spinnerA);
+        spinnerS = (Spinner)findViewById(R.id.spinnerS);
 
+        String[] itemsEnergy = new String[]{"kJ", "J"};
 
+        String[] itemsgr = new String[]{"g", "dg", "cg", "mg"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, itemsEnergy);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, itemsgr);
+
+        spinnerE.setAdapter(adapter);
+        spinnerG.setAdapter(adapter2);
+        spinnerGR.setAdapter(adapter2);
+        spinnerA.setAdapter(adapter2);
+        spinnerS.setAdapter(adapter2);
 
         //prueba a ver si jala el id del boton en ResultsActivity
 
