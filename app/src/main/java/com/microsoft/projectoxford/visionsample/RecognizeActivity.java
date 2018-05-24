@@ -118,6 +118,7 @@ public class RecognizeActivity extends ActionBarActivity {
         btnContinue = (Button)findViewById(R.id.buttonpresserino2);
 
         btnContinue.setEnabled(false);
+        btnContinue.setVisibility(View.INVISIBLE);
         btnfinal.setEnabled(false);
 
         btnContinue.setOnClickListener(new View.OnClickListener() {
@@ -154,6 +155,8 @@ public class RecognizeActivity extends ActionBarActivity {
 
                     mEditText.setText("");
                     btnfinal.setEnabled(false);
+                    btnfinal.setVisibility(View.INVISIBLE);
+                    btnContinue.setVisibility(View.VISIBLE);
                     btnContinue.setEnabled(true);
 
                     //flush
@@ -241,6 +244,7 @@ public class RecognizeActivity extends ActionBarActivity {
 
     public void doRecognize() {
         mButtonSelectImage.setEnabled(false);
+        btnContinue.setVisibility(View.INVISIBLE);
         mEditText.setText("Analyzing...");
 
         try {
@@ -315,6 +319,8 @@ public class RecognizeActivity extends ActionBarActivity {
             }
             mButtonSelectImage.setEnabled(true);
             btnfinal.setEnabled(true);
+            btnfinal.setVisibility(View.VISIBLE);
+
         }
     }
 }
