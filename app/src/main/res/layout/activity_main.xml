@@ -1,5 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:windowSoftInputMode = "adjustResize"
+
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -7,6 +9,86 @@
 
 
     <!-- android:background="@layout/rounded_button_settings" -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/kappa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingreso De Calorias                                                          Si no conoces tu ingesta diaria, utiliza 2500
+                                                                                                           -
+                                                                                                           Escanear Etiqueta
+                                                                                                           -
+
+                                                                                                           En la actividad bajo el boton escanear etiqueta
+                                                                                                           presiona Cámara para ver las opciones de procesamiento de imagen tomar una foto
+                                                                                                           de la etiqueta requiere que poseas la etiqueta
+                                                                                                           nutricional física
+                                                                                                           -
+
+                                                                                                           La opción selecciona de la galería te permite
+                                                                                                           extraer los datos de una etiqueta a la que
+                                                                                                           le hayas tomado foto anteriormente
+                                                                                                           -
+
+                                                                                                           Luego de cualquiera de los dos métodos espera
+                                                                                                           a que el botón de procesar se vuelva disponible
+                                                                                                           y presionalo, si los datos se tomaron exitosamente
+                                                                                                           aparecerá el botón de continuar, de otro modo se te
+                                                                                                           pedirá que vuelvas a utilizar cualquiera de los dos
+                                                                                                           métodos
+                                                                                                           -
+
+
+                                                                                                           Resultados
+                                                                                                           -
+
+                                                                                                           Las capsulas se pueden presionar para obtener
+                                                                                                           información adicional
+                                                                                                           -
+
+                                                                                                           Los colores poseen el siguiente signficado:
+
+                                                                                                           Verde: Es completamente sano
+
+                                                                                                           Amarillo: Se debe consumir con moderación
+
+                                                                                                           Rojo: Es dañino y se debe limitar el consumo
+                                                                                                           -
+
+
+                                                                                                           Actividad De Ingreso
+                                                                                                           -
+
+                                                                                                           Acá puedes ingresar cada dato manualmente de
+                                                                                                           una etiqueta u otra fuente, si no posees uno
+                                                                                                           de los datos que pide, entonces escribe 0 en
+                                                                                                           el espacio ten en cuenta que es necesario que
+                                                                                                           todos los campos esten llenos para poder
+                                                                                                           continuar,al terminar de ingresar todos los datos
+                                                                                                           se te llevará a la pantalla de resultados que puedes
+                                                                                                           consultar en la sección de arriba
+                                                                                                           -
+                                                                                                           -
+                                                                                                           -
+                                                                                                           -
+                                                                                                           -
+                                                                                                           -
+
+
+
+" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/button_input"
@@ -36,6 +118,18 @@
         android:fontFamily="@font/roboto"
         android:onClick="activityRecognize"
         android:text=" Escanear Etiqueta "
+        android:textAllCaps="false"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnAyuda"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="425dp"
+        android:fontFamily="@font/roboto"
+        android:text="Ayuda"
         android:textAllCaps="false"
         android:textSize="10pt"
         android:textStyle="bold" />

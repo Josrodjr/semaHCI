@@ -36,14 +36,17 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.Console;
@@ -55,22 +58,31 @@ public class MainActivity extends ActionBarActivity {
     Button btn;
     Button btn2;
     Button btnIngesta;
+    Button btnhalp;
 
     AutoCompleteTextView txtIngesta;
 
     String Ingesta;
+    String halp;
 
     Float Peace;
+
+    TextView txtHalp;
+
+    Layout viewHelp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         btn = (Button)findViewById(R.id.button_input);
         btn2 = (Button)findViewById(R.id.button_recognize);
 
         btnIngesta = (Button)findViewById(R.id.btnIngesta);
+        btnhalp = (Button)findViewById(R.id.btnAyuda);
+
+
 
         txtIngesta = (AutoCompleteTextView) findViewById(R.id.TxtIngesta);
         String[] diets = getResources().getStringArray(R.array.diets);
@@ -83,6 +95,37 @@ public class MainActivity extends ActionBarActivity {
 
         btn.setEnabled(false);
         btn2.setEnabled(false);
+
+        txtHalp = (TextView)findViewById(R.id.txtHelp);
+        txtHalp.setVisibility(View.INVISIBLE);
+        btnhalp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               halp = String.valueOf(btnhalp.getText());
+               if(halp == "Ayuda"){
+                   btn.setVisibility(View.INVISIBLE);
+                   btn2.setVisibility(View.INVISIBLE);
+                   btnIngesta.setVisibility(View.INVISIBLE);
+                   txtIngesta.setVisibility(View.INVISIBLE);
+                   txtHalp.setVisibility(View.VISIBLE);
+                   txtHalp.setEnabled(true);
+
+                   btnhalp.setText("Regresar");
+
+               }
+               else{
+
+                   btn.setVisibility(View.VISIBLE);
+                   btn2.setVisibility(View.VISIBLE);
+                   btnIngesta.setVisibility(View.VISIBLE);
+                   txtIngesta.setVisibility(View.VISIBLE);
+                   btnhalp.setText("Ayuda");
+                   txtHalp.setVisibility(View.INVISIBLE);
+
+               }
+
+            }
+        });
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, diets);
         txtIngesta.setAdapter(adapter);
@@ -100,7 +143,6 @@ public class MainActivity extends ActionBarActivity {
 
                     btn.setEnabled(true);
                     btn2.setEnabled(true);
-
 
                 }catch (Exception e){
                     Toast.makeText(MainActivity.this,"Ingresa algo en el campo superior por favor",Toast.LENGTH_SHORT).show();
